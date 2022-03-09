@@ -2,11 +2,10 @@
 
 describe ('Base test of landing page', () => {
 
-  it('Base page test', () => {
+  it('Tests base page hello world output', () => {
     
     cy.visit('http://hello-world-app.dev.ewapsmod.demoriva.com/')
-    cy.get('<body>')
-      .find('[id="thing"]')
-      .should('have text', 'hello -- this is from the hello world application!!!')
+    cy.get('[div] > [id="thing"]')
+      .should('contain', 'hello -- this is from the hello world application!!!')
   })
 })
